@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<title>AI Presentaion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/night.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" />
+		<link rel="stylesheet" href="lib/button.css" />
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,26 +25,72 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-color="#ffffff" data-background-image="content/00-brain-gear.gif" data-background-size="contain,contain">
+					<section data-markdown="content/00-title.md"></section>
+					<section data-markdown="content/00-contents.md"></section>
+			</section>
+			<section>
+					<section><h2>Introduction</h2></section>
+					<section data-markdown="content/01-introduction.md"></section>
+					<section data-markdown="" data-background-image="content/01-ai-history.png" data-background-size="contain,contain"></section>
+			</section>
+			<section>
+					<section><h2>Summary</h2></section>
+					<section data-markdown="content/02-backgrounds.md"></section>
+					<section data-markdown="" data-background-image="content/02-comparison-programming-and-machine-learning.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/02-comparison-machine-learning-and-deep-learning.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/02-human-case-doctor-lawyer.png" data-background-size="contain,contain">
+							Like    
+							a diagnosing    
+							doctor    
+							or    
+							an investigating    
+							lawyer...
+					</section>
+			</section>
+			<section>
+					<section><h2>About Development</h2></section>
+					<section data-markdown="content/03-libraries.md"></section>
+					<section data-markdown="content/03-library-example-tensorflow.md"></section>
+					<section data-markdown="" data-background-image="content/03-encode-decode.png" data-background-size="contain,contain"></section>
+					<section data-markdown="content/03-service.md"></section>
+					<section data-markdown="content/03-course-of-action.md"></section>
+			</section>
+			<section>
+					<section><h2>Business Examples</h2></section>
+					<section data-markdown="" data-background-image="content/04-bot-example-line-yamato.jpg" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/04-bot-example-replai-yokohama.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/04-service-example-azure-bot-framework.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/04-service-example-aws-rekognition.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/04-service-example-aws-polly.png" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/04-service-example-sitest.png" data-background-size="contain,contain"></section>
+			</section>
+			<section>
+					<section><h2>Tips And Cheers</h2></section>
+					<section data-markdown="content/05-development.md"></section>
+					<section data-markdown="" data-background-image="content/05-programming-a-enjoyable-toy.jpg" data-background-size="contain,contain"></section>
+					<section data-markdown="" data-background-image="content/05-pair-programming.png" data-background-size="contain,contain"></section>
+					<section>
+							<button onclick="var el = document.getElementById('end-greet'); el.style.display = el.style.display ? '' : 'none';">End</button>
+							<div id="end-greet" style="display: none;">
+									<p>Thank you for your listening!</p>
+									<p style="font-size: small;">Supported by reveal.js</p>
+							</div>
+					</section>
+			</section>
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            dependencies: [
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+    </script>
 	</body>
 </html>
